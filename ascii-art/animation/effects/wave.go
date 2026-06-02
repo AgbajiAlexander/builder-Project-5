@@ -1,8 +1,6 @@
 package effects
 
-import (
-	"math"
-)
+import "math"
 
 func Wave(text string, frames int) []string {
 	result := []string{}
@@ -11,7 +9,7 @@ func Wave(text string, frames int) []string {
 	for f := 0; f < frames; f++ {
 		lines := make([]string, 10)
 		for i := 0; i < n; i++ {
-			offset := int(math.Sin(float64(f+i)*0.5) * 3) // vertical shift
+			offset := int(math.Sin(float64(f+i)*0.5) * 3)
 			lineIndex := 5 + offset
 			if lineIndex < 0 {
 				lineIndex = 0
